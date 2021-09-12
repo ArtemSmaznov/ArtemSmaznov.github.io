@@ -1,0 +1,54 @@
+#+TITLE: AS Linux
+#+AUTHOR: Artem Smaznov
+#+DESCRIPTION: Artem's site on linux
+#+STARTUP: overview
+
+* Dotfiles
+List of repositories hosting my dotfiles for Linux
+- [[https://github.com/ArtemSmaznov/Dotfiles][Dotfiles]]
+- [[https://github.com/ArtemSmaznov/qTile][qTile]]
+- [[https://github.com/ArtemSmaznov/AwesomeWM][AwesomeWM]]
+- [[https://github.com/ArtemSmaznov/Vim][Vim]]
+- [[https://github.com/ArtemSmaznov/dmscripts][dmscripts]]
+- [[https://github.com/ArtemSmaznov/Wallpapers][Wallpapers]]
+
+* Games
+** Morrowind
+- [[https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide][Morrowind Graphics Guide]]
+  + [[https://www.nexusmods.com/morrowind/mods/41102][MGE XE]]
+  + [[https://www.nexusmods.com/morrowind/mods/19510/][Morrowind Code Patch]]
+- [[https://www.nexusmods.com/morrowind/mods/43209?tab=files&file_id=1000002739][House in Balmora]]
+
+*** Installing MGE XE
+[[https://www.reddit.com/r/linux_gaming/comments/e78v9a/morrowind_mge_xe_mod_wine_or_proton/][reddit: Morrowind + MGE XE Mod (Wine Or Proton)]]
+
+1. Install Morrowind
+2. Get the Wine/Proton prefix directory
+
+   If you installed Morrowind using the =Steam= client
+   #+begin_src shell
+    /home/USERNAME/.steam/steam/steamapps/compatdata/22320/pfx/
+   #+end_src
+
+    If you installed Morrowind using something like =PlayOnLinux=
+   #+begin_src shell
+    /home/USERNAME/PlayOnLinux's virtual drives/Morrowind/
+   #+end_src
+3. Launch the terminal and enter the following commands
+    #+begin_src shell
+    WINEPREFIX="/path/to/wine/prefix" winecfg
+    #+end_src
+4. Go to the Libraries tab
+5. Add the =dinput.dll= and =d3d8.dll= and set the added DLLs to "native, builtin"
+6. Click Apply and then click OK
+7. Install =Winetricks=
+8. Launch the terminal and enter the following commands
+   #+begin_src shell
+    WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_43
+    WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_47
+    WINEPREFIX="/path/to/wine/prefix" winetricks d3dx9_43
+   #+end_src
+9. Install MGE XE mod
+   #+begin_src shell
+    env WINEPREFIX="/PATH/TO/WINE/PREFIX" wine "C:\windows\command\start.exe" /Unix "/PATH/TO/MGE.exe"
+   #+end_src

@@ -1,0 +1,6 @@
+#+TITLE: AS Linux
+#+AUTHOR: Artem Smaznov
+#+DESCRIPTION: Artem's site on linux
+#+STARTUP: overview
+
+https://artemsmaznov.github.io/
