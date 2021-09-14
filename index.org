@@ -1,7 +1,11 @@
-#+TITLE: AS Linux
+#+TITLE: asLinux
 #+AUTHOR: Artem Smaznov
 #+DESCRIPTION: Artem's site on linux
 #+STARTUP: overview
+#+OPTIONS: num:nil ^:{}
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gruvbox.css"/>
+# #+INCLUDE: header.org
 
 * Dotfiles
 List of repositories hosting my dotfiles for Linux
@@ -17,6 +21,7 @@ List of repositories hosting my dotfiles for Linux
 - [[https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide][Morrowind Graphics Guide]]
   + [[https://www.nexusmods.com/morrowind/mods/41102][MGE XE]]
   + [[https://www.nexusmods.com/morrowind/mods/19510/][Morrowind Code Patch]]
+- [[https://www.nexusmods.com/morrowind/mods/36873/][Better Dialogue Font]]
 - [[https://www.nexusmods.com/morrowind/mods/43209?tab=files&file_id=1000002739][House in Balmora]]
 
 *** Installing MGE XE

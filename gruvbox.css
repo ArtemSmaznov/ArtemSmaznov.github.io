@@ -1,0 +1,28 @@
+body{
+    background-color: #282828;
+    color: #fbf1c7;
+}
+#content{
+    background-color: #282828;
+    color: #fbf1c7;
+}
+
+.title{ color: #fb4934; }
+h2{ color: #d3869b }
+h3{ color: #8ec07c }
+h4{ color: #b8bb26 }
+h5{ color: #b16286 }
+h6{ color: #689d6a }
+
+a{ color: #fabd2f }
+a:visited{ color: #d79921 }
+a:hover{ color: #fe8019 }
+
+code {
+    background-color: #1d2021;
+    border-color: #504945;
+}
+pre.src {
+    background-color: #1d2021;
+    border-color: #504945;
+}
