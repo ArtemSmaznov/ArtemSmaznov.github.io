@@ -1,3 +1,0 @@
-#+DESCRIPTION: header
-
-| [[file:index.org][Home]] | [[file:games.org][Games]] |

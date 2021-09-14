@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-14 Tue 23:50 -->
+<!-- 2021-09-14 Tue 23:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Arch Sub</title>
+<title>Arch Sub - Games</title>
 <meta name="author" content="Artem Smaznov" />
 <meta name="description" content="Artem's site on linux
 header" />
@@ -205,12 +205,16 @@ header" />
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Arch Sub</h1>
+<h1 class="title">Arch Sub - Games</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgeceeef0">Dotfiles</a></li>
+<li><a href="#org1cbccef">Morrowind</a>
+<ul>
+<li><a href="#orgb766e2c">Installing MGE XE</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -233,26 +237,84 @@ header" />
 </tbody>
 </table>
 
-<div id="outline-container-orgeceeef0" class="outline-2">
-<h2 id="orgeceeef0">Dotfiles</h2>
-<div class="outline-text-2" id="text-orgeceeef0">
-<p>
-List of repositories hosting my dotfiles for Linux
-</p>
+<div id="outline-container-org1cbccef" class="outline-2">
+<h2 id="org1cbccef">Morrowind</h2>
+<div class="outline-text-2" id="text-org1cbccef">
 <ul class="org-ul">
-<li><a href="https://github.com/ArtemSmaznov/Dotfiles">Dotfiles</a></li>
-<li><a href="https://github.com/ArtemSmaznov/qTile">qTile</a></li>
-<li><a href="https://github.com/ArtemSmaznov/AwesomeWM">AwesomeWM</a></li>
-<li><a href="https://github.com/ArtemSmaznov/Vim">Vim</a></li>
-<li><a href="https://github.com/ArtemSmaznov/dmscripts">dmscripts</a></li>
-<li><a href="https://github.com/ArtemSmaznov/Wallpapers">Wallpapers</a></li>
+<li><a href="https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide">Morrowind Graphics Guide</a>
+<ul class="org-ul">
+<li><a href="https://www.nexusmods.com/morrowind/mods/41102">MGE XE</a></li>
+<li><a href="https://www.nexusmods.com/morrowind/mods/19510/">Morrowind Code Patch</a></li>
+</ul></li>
+<li><a href="https://www.nexusmods.com/morrowind/mods/36873/">Better Dialogue Font</a></li>
+<li><a href="https://www.nexusmods.com/morrowind/mods/43209?tab=files&amp;file_id=1000002739">House in Balmora</a></li>
 </ul>
+</div>
+
+<div id="outline-container-orgb766e2c" class="outline-3">
+<h3 id="orgb766e2c">Installing MGE XE</h3>
+<div class="outline-text-3" id="text-orgb766e2c">
+<p>
+<a href="https://www.reddit.com/r/linux_gaming/comments/e78v9a/morrowind_mge_xe_mod_wine_or_proton/">reddit: Morrowind + MGE XE Mod (Wine Or Proton)</a>
+</p>
+
+<ol class="org-ol">
+<li>Install Morrowind</li>
+<li><p>
+Get the Wine/Proton prefix directory
+</p>
+
+<p>
+If you installed Morrowind using the <code>Steam</code> client
+</p>
+<pre class="example" id="org12116f6">
+/home/USERNAME/.steam/steam/steamapps/compatdata/22320/pfx/
+</pre>
+
+<p>
+If you installed Morrowind using something like <code>PlayOnLinux</code>
+</p>
+<pre class="example" id="orgfd534f5">
+/home/USERNAME/PlayOnLinux's virtual drives/Morrowind/
+</pre></li>
+
+<li><p>
+Launch the terminal and enter the following commands
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winecfg
+</pre>
+</div></li>
+
+<li>Go to the Libraries tab</li>
+<li>Add the <code>dinput.dll</code> and <code>d3d8.dll</code> and set the added DLLs to &ldquo;native, builtin&rdquo;</li>
+<li>Click Apply and then click OK</li>
+<li>Install <code>Winetricks</code></li>
+<li><p>
+Launch the terminal and enter the following commands
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dcompiler_43
+<span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dcompiler_47
+<span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dx9_43
+</pre>
+</div></li>
+
+<li><p>
+Install MGE XE mod
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">env <span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/PATH/TO/WINE/PREFIX"</span> wine <span style="color: #b8bb26;">"C:\windows\command\start.exe"</span> /Unix <span style="color: #b8bb26;">"/PATH/TO/MGE.exe"</span>
+</pre>
+</div></li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Artem Smaznov</p>
-<p class="date">Created: 2021-09-14 Tue 23:50</p>
+<p class="date">Created: 2021-09-14 Tue 23:44</p>
 </div>
 </body>
 </html>

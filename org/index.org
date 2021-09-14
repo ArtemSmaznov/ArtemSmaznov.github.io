@@ -1,0 +1,18 @@
+#+TITLE: Arch Sub
+#+AUTHOR: Artem Smaznov
+#+DESCRIPTION: Artem's site on linux
+#+STARTUP: overview
+#+OPTIONS: num:nil ^:{}
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gruvbox.css"/>
+#+INCLUDE: header.org
+
+* Dotfiles
+List of repositories hosting my dotfiles for Linux
+- [[https://github.com/ArtemSmaznov/Dotfiles][Dotfiles]]
+- [[https://github.com/ArtemSmaznov/qTile][qTile]]
+- [[https://github.com/ArtemSmaznov/AwesomeWM][AwesomeWM]]
+- [[https://github.com/ArtemSmaznov/Vim][Vim]]
+- [[https://github.com/ArtemSmaznov/dmscripts][dmscripts]]
+- [[https://github.com/ArtemSmaznov/Wallpapers][Wallpapers]]
+

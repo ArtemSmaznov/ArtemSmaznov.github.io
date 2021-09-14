@@ -1,30 +1,20 @@
-#+TITLE: asLinux
+#+TITLE: Arch Sub - Games
 #+AUTHOR: Artem Smaznov
 #+DESCRIPTION: Artem's site on linux
 #+STARTUP: overview
 #+OPTIONS: num:nil ^:{}
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gruvbox.css"/>
-# #+INCLUDE: header.org
+#+INCLUDE: header.org
 
-* Dotfiles
-List of repositories hosting my dotfiles for Linux
-- [[https://github.com/ArtemSmaznov/Dotfiles][Dotfiles]]
-- [[https://github.com/ArtemSmaznov/qTile][qTile]]
-- [[https://github.com/ArtemSmaznov/AwesomeWM][AwesomeWM]]
-- [[https://github.com/ArtemSmaznov/Vim][Vim]]
-- [[https://github.com/ArtemSmaznov/dmscripts][dmscripts]]
-- [[https://github.com/ArtemSmaznov/Wallpapers][Wallpapers]]
-
-* Games
-** Morrowind
+* Morrowind
 - [[https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide][Morrowind Graphics Guide]]
   + [[https://www.nexusmods.com/morrowind/mods/41102][MGE XE]]
   + [[https://www.nexusmods.com/morrowind/mods/19510/][Morrowind Code Patch]]
 - [[https://www.nexusmods.com/morrowind/mods/36873/][Better Dialogue Font]]
 - [[https://www.nexusmods.com/morrowind/mods/43209?tab=files&file_id=1000002739][House in Balmora]]
 
-*** Installing MGE XE
+** Installing MGE XE
 [[https://www.reddit.com/r/linux_gaming/comments/e78v9a/morrowind_mge_xe_mod_wine_or_proton/][reddit: Morrowind + MGE XE Mod (Wine Or Proton)]]
 
 1. Install Morrowind

@@ -49,3 +49,6 @@ span.test {
     background-color: #28282800;
     border-color: #fabd2f;
 }
+
+table tr:nth-child(2n-1) td { background-color: #28282800 }
+table tr, table td { border: none }
