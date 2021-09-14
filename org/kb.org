@@ -1,0 +1,26 @@
+#+TITLE: Arch Sub - Knowledge Base
+#+AUTHOR: Artem Smaznov
+#+DESCRIPTION: Artem's site on linux
+#+STARTUP: overview
+#+OPTIONS: num:nil ^:{}
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gruvbox.css"/>
+#+INCLUDE: header.org
+
+* ssh
+** Extending Screens
+You can add another computer's monitor to your host's screen and control it using your keyboard and mouse as if it was an extra monitor. It can come in handy when working on 2 computers as you can control both with the same of keyboard and mouse.
+
+- =user@host:port= specify the host to add to your screen.
+- =-east= select which direction from your current monitors the new one will be added
+#+begin_src shell
+ssh -YC user@host:port x2x -east -to :0.0
+#+end_src
+
+* git
+** Bare Repositories
+
+Turning off untracked files for git status for bare repositories
+#+begin_src shell
+git config status.showUntrackedFiles off
+#+end_src

@@ -1,4 +1,4 @@
-#+TITLE: AS Linux
+#+TITLE: Arch Sub
 #+AUTHOR: Artem Smaznov
 #+DESCRIPTION: Artem's site on linux
 #+STARTUP: overview

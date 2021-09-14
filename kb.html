@@ -6,7 +6,7 @@
 <!-- 2021-09-15 Wed 00:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Arch Sub - Games</title>
+<title>Arch Sub - Knowledge Base</title>
 <meta name="author" content="Artem Smaznov" />
 <meta name="description" content="Artem's site on linux
 header" />
@@ -205,14 +205,19 @@ header" />
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Arch Sub - Games</h1>
+<h1 class="title">Arch Sub - Knowledge Base</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1cbccef">Morrowind</a>
+<li><a href="#orge0278d5">ssh</a>
 <ul>
-<li><a href="#orgb766e2c">Installing MGE XE</a></li>
+<li><a href="#orgb74d1a3">Extending Screens</a></li>
+</ul>
+</li>
+<li><a href="#org17a4aee">git</a>
+<ul>
+<li><a href="#org7820c9e">Bare Repositories</a></li>
 </ul>
 </li>
 </ul>
@@ -237,77 +242,43 @@ header" />
 </tbody>
 </table>
 
-<div id="outline-container-org1cbccef" class="outline-2">
-<h2 id="org1cbccef">Morrowind</h2>
-<div class="outline-text-2" id="text-org1cbccef">
+<div id="outline-container-orge0278d5" class="outline-2">
+<h2 id="orge0278d5">ssh</h2>
+<div class="outline-text-2" id="text-orge0278d5">
+</div>
+<div id="outline-container-orgb74d1a3" class="outline-3">
+<h3 id="orgb74d1a3">Extending Screens</h3>
+<div class="outline-text-3" id="text-orgb74d1a3">
+<p>
+You can add another computer&rsquo;s monitor to your host&rsquo;s screen and control it using your keyboard and mouse as if it was an extra monitor. It can come in handy when working on 2 computers as you can control both with the same of keyboard and mouse.
+</p>
+
 <ul class="org-ul">
-<li><a href="https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide">Morrowind Graphics Guide</a>
-<ul class="org-ul">
-<li><a href="https://www.nexusmods.com/morrowind/mods/41102">MGE XE</a></li>
-<li><a href="https://www.nexusmods.com/morrowind/mods/19510/">Morrowind Code Patch</a></li>
-</ul></li>
-<li><a href="https://www.nexusmods.com/morrowind/mods/36873/">Better Dialogue Font</a></li>
-<li><a href="https://www.nexusmods.com/morrowind/mods/43209?tab=files&amp;file_id=1000002739">House in Balmora</a></li>
+<li><code>user@host:port</code> specify the host to add to your screen.</li>
+<li><code>-east</code> select which direction from your current monitors the new one will be added</li>
 </ul>
+<div class="org-src-container">
+<pre class="src src-shell">ssh -YC user@host:port x2x -east -to :0.0
+</pre>
+</div>
+</div>
+</div>
 </div>
 
-<div id="outline-container-orgb766e2c" class="outline-3">
-<h3 id="orgb766e2c">Installing MGE XE</h3>
-<div class="outline-text-3" id="text-orgb766e2c">
+<div id="outline-container-org17a4aee" class="outline-2">
+<h2 id="org17a4aee">git</h2>
+<div class="outline-text-2" id="text-org17a4aee">
+</div>
+<div id="outline-container-org7820c9e" class="outline-3">
+<h3 id="org7820c9e">Bare Repositories</h3>
+<div class="outline-text-3" id="text-org7820c9e">
 <p>
-<a href="https://www.reddit.com/r/linux_gaming/comments/e78v9a/morrowind_mge_xe_mod_wine_or_proton/">reddit: Morrowind + MGE XE Mod (Wine Or Proton)</a>
-</p>
-
-<ol class="org-ol">
-<li>Install Morrowind</li>
-<li><p>
-Get the Wine/Proton prefix directory
-</p>
-
-<p>
-If you installed Morrowind using the <code>Steam</code> client
-</p>
-<pre class="example" id="org08fbde6">
-/home/USERNAME/.steam/steam/steamapps/compatdata/22320/pfx/
-</pre>
-
-<p>
-If you installed Morrowind using something like <code>PlayOnLinux</code>
-</p>
-<pre class="example" id="orge32e9e4">
-/home/USERNAME/PlayOnLinux's virtual drives/Morrowind/
-</pre></li>
-
-<li><p>
-Launch the terminal and enter the following commands
+Turning off untracked files for git status for bare repositories
 </p>
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winecfg
+<pre class="src src-shell"><span style="color: #fabd2f;">git</span> config status.showUntrackedFiles off
 </pre>
-</div></li>
-
-<li>Go to the Libraries tab</li>
-<li>Add the <code>dinput.dll</code> and <code>d3d8.dll</code> and set the added DLLs to &ldquo;native, builtin&rdquo;</li>
-<li>Click Apply and then click OK</li>
-<li>Install <code>Winetricks</code></li>
-<li><p>
-Launch the terminal and enter the following commands
-</p>
-<div class="org-src-container">
-<pre class="src src-shell"><span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dcompiler_43
-<span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dcompiler_47
-<span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/path/to/wine/prefix"</span> winetricks d3dx9_43
-</pre>
-</div></li>
-
-<li><p>
-Install MGE XE mod
-</p>
-<div class="org-src-container">
-<pre class="src src-shell">env <span style="color: #83a598;">WINEPREFIX</span>=<span style="color: #b8bb26;">"/PATH/TO/WINE/PREFIX"</span> wine <span style="color: #b8bb26;">"C:\windows\command\start.exe"</span> /Unix <span style="color: #b8bb26;">"/PATH/TO/MGE.exe"</span>
-</pre>
-</div></li>
-</ol>
+</div>
 </div>
 </div>
 </div>
