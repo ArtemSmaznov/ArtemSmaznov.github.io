@@ -31,29 +31,32 @@ List of repositories hosting my dotfiles for Linux
 2. Get the Wine/Proton prefix directory
 
    If you installed Morrowind using the =Steam= client
-   #+begin_src shell
-    /home/USERNAME/.steam/steam/steamapps/compatdata/22320/pfx/
-   #+end_src
+   #+begin_example
+/home/USERNAME/.steam/steam/steamapps/compatdata/22320/pfx/
+   #+end_example
 
     If you installed Morrowind using something like =PlayOnLinux=
-   #+begin_src shell
-    /home/USERNAME/PlayOnLinux's virtual drives/Morrowind/
-   #+end_src
+   #+begin_example
+/home/USERNAME/PlayOnLinux's virtual drives/Morrowind/
+   #+end_example
+
 3. Launch the terminal and enter the following commands
     #+begin_src shell
-    WINEPREFIX="/path/to/wine/prefix" winecfg
+WINEPREFIX="/path/to/wine/prefix" winecfg
     #+end_src
+
 4. Go to the Libraries tab
 5. Add the =dinput.dll= and =d3d8.dll= and set the added DLLs to "native, builtin"
 6. Click Apply and then click OK
 7. Install =Winetricks=
 8. Launch the terminal and enter the following commands
    #+begin_src shell
-    WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_43
-    WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_47
-    WINEPREFIX="/path/to/wine/prefix" winetricks d3dx9_43
+WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_43
+WINEPREFIX="/path/to/wine/prefix" winetricks d3dcompiler_47
+WINEPREFIX="/path/to/wine/prefix" winetricks d3dx9_43
    #+end_src
+
 9. Install MGE XE mod
    #+begin_src shell
-    env WINEPREFIX="/PATH/TO/WINE/PREFIX" wine "C:\windows\command\start.exe" /Unix "/PATH/TO/MGE.exe"
+env WINEPREFIX="/PATH/TO/WINE/PREFIX" wine "C:\windows\command\start.exe" /Unix "/PATH/TO/MGE.exe"
    #+end_src

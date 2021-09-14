@@ -1,28 +1,51 @@
-body{
-    background-color: #282828;
-    color: #fbf1c7;
-}
-#content{
+body, #content {
     background-color: #282828;
     color: #fbf1c7;
 }
 
-.title{ color: #fb4934; }
-h2{ color: #d3869b }
-h3{ color: #8ec07c }
-h4{ color: #b8bb26 }
-h5{ color: #b16286 }
-h6{ color: #689d6a }
+.title { color: #fb4934 }
+h2 { color: #d3869b }
+h3 { color: #8ec07c }
+h4 { color: #b8bb26 }
+h5 { color: #b16286 }
+h6 { color: #689d6a }
 
-a{ color: #fabd2f }
-a:visited{ color: #d79921 }
-a:hover{ color: #fe8019 }
+a { color: #fabd2f }
+a:visited { color: #d79921 }
+a:hover { color: #fe8019 }
 
-code {
+p.author { color: #cc241d }
+p.date { color: #689d6a }
+.timestamp { color: #b8bb26 }
+
+code, pre.src, pre.example {
     background-color: #1d2021;
-    border-color: #504945;
+    border-color: #3c3836;
 }
-pre.src {
-    background-color: #1d2021;
-    border-color: #504945;
+pre.src:before {
+    background-color: #282828;
+    color: #665c54;
+}
+
+code { color: #fabd2f }
+pre.src { color: #d5c4a1 }
+pre.example { color: #bdae93 }
+
+.todo, .done { color: #282828 }
+.TODO, .IDEA, .LOOP { background-color: #b8bb26 }
+.DONE { background-color: #665c54 }
+.WAIT, .HOLD { background-color: #fabd2f }
+.STRT { background-color: #d3869b }
+.PROJ { background-color: #fbf1c7 }
+.KILL { background-color: #fb4934 }
+
+.___, ._X_ { background-color: #282828 }
+.___ { color: #b8bb26 }
+._X_ { color: #665c54 }
+
+.tag { background-color: #665c54 }
+span.test {
+    color: #fabd2f;
+    background-color: #28282800;
+    border-color: #fabd2f;
 }
