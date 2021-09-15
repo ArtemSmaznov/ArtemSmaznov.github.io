@@ -15,7 +15,7 @@ a:visited { color: #d79921 }
 a:hover { color: #fe8019 }
 
 p.author { color: #cc241d }
-p.date { color: #689d6a }
+#postamble date { color: #8ec07c }
 .timestamp { color: #b8bb26 }
 
 code, pre.src, pre.example {
@@ -52,3 +52,17 @@ span.test {
 
 table tr:nth-child(2n-1) td { background-color: #28282800 }
 table tr, table td { border: none }
+
+#table-of-contents { background-color: #3c3836 }
+
+#copyright, #postamble { background-color: #1d2021 }
+
+#table-of-contents h2, #toggle-sidebar h2 {
+    color: #282828;
+    background-color: #98971a;
+}
+
+ul.nav>li.active>a {
+    background-color: #7c6f64;
+    border-right: #00000000;
+}
