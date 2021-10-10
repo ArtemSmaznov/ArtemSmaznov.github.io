@@ -1,4 +1,4 @@
-#+TITLE: Arch Sub - Knowledge Base
+#+TITLE: ArtS - Knowledge Base
 #+AUTHOR: Artem Smaznov
 #+DESCRIPTION: Artem's site on linux
 #+STARTUP: overview

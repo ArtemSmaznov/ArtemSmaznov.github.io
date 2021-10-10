@@ -1,4 +1,4 @@
-#+TITLE: Arch Sub - Games
+#+TITLE: ArtS - Games
 #+AUTHOR: Artem Smaznov
 #+DESCRIPTION: Artem's site on linux
 #+STARTUP: overview
@@ -52,6 +52,7 @@ env WINEPREFIX="/PATH/TO/WINE/PREFIX" wine "C:\windows\command\start.exe" /Unix 
    #+end_src
 * Diablo II
 Useful links:
+- [[https://d2.maxroll.gg/][MaxRoll]]
 - https://d2links.net
 - [[http://d2cheatsheet.com][Quick Reference Cheatsheet]]
 - [[https://pathofdiablo.com/runewizard][Rune Wizzard]]
