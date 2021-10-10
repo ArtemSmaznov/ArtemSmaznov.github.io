@@ -7,6 +7,18 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="gruvbox.css"/>
 #+INCLUDE: header.org
 
+* Diablo II
+Useful links:
+- [[https://d2cheatsheet.com/][Quick Reference Cheatsheet]]
+- [[https://d2.maxroll.gg/][MaxRoll]]
+- [[https://pathofdiablo.com/runewizard][Rune Wizzard]]
+- [[http://classic.battle.net/diablo2exp][The Arreat Summit]]
+- [[https://dropcalc.silospen.com/][Drop Chance Calculator]]
+- [[https://diablo2.io/forums/diablo-2-runewords-runes-cheat-sheet-t8644.html][Runewords]]
+- [[https://d2planner.github.io/skills][Skill Planner]]
+- [[https://diablo2.diablowiki.net/images/9/97/Magic-find-diminishing-returns.jpg][Magic Find Chart]]
+- [[https://d2.maxroll.gg/resources/map-reading][Map Reading]]
+- https://d2links.net
 * Morrowind
 - [[https://wiki.nexusmods.com/index.php/Morrowind_graphics_guide][Morrowind Graphics Guide]]
   + [[https://www.nexusmods.com/morrowind/mods/41102][MGE XE]]
@@ -50,15 +62,3 @@ WINEPREFIX="/path/to/wine/prefix" winetricks d3dx9_43
    #+begin_src shell
 env WINEPREFIX="/PATH/TO/WINE/PREFIX" wine "C:\windows\command\start.exe" /Unix "/PATH/TO/MGE.exe"
    #+end_src
-* Diablo II
-Useful links:
-- [[https://d2.maxroll.gg/][MaxRoll]]
-- https://d2links.net
-- [[http://d2cheatsheet.com][Quick Reference Cheatsheet]]
-- [[https://pathofdiablo.com/runewizard][Rune Wizzard]]
-- [[http://classic.battle.net/diablo2exp][The Arreat Summit]]
-- [[https://dropcalc.silospen.com/][Drop Chance Calculator]]
-- [[https://diablo2.io/forums/diablo-2-runewords-runes-cheat-sheet-t8644.html][Runewords]]
-- [[https://d2planner.github.io/skills][Skill Planner]]
-- [[https://diablo2.diablowiki.net/images/9/97/Magic-find-diminishing-returns.jpg][Magic Find Chart]]
-- [[https://d2.maxroll.gg/resources/map-reading][Map Reading]]
