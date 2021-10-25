@@ -19,8 +19,18 @@ ssh -YC user@host:port x2x -east -to :0.0
 
 * git
 ** Bare Repositories
-
 Turning off untracked files for git status for bare repositories
 #+begin_src shell
 git config status.showUntrackedFiles off
+#+end_src
+
+* awk
+Print the first column (separated by =:=) from =/etc/passwd=
+#+begin_src shell
+awk -F: '{print $1}' /etc/passwd
+#+end_src
+
+Print the first column (separated by =:=) from =/etc/passwd= where the 3rd column is =1000=
+#+begin_src shell
+awk -F: '$3=="1000" {print $1}' /etc/passwd
 #+end_src

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-10 Sun 13:36 -->
+<!-- 2021-10-25 Mon 17:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ArtS - Knowledge Base</title>
@@ -220,6 +220,7 @@ header" />
 <li><a href="#org0d0ed8c">Bare Repositories</a></li>
 </ul>
 </li>
+<li><a href="#orgd6ccf04">awk</a></li>
 </ul>
 </div>
 </div>
@@ -282,10 +283,31 @@ Turning off untracked files for git status for bare repositories
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgd6ccf04" class="outline-2">
+<h2 id="orgd6ccf04">awk</h2>
+<div class="outline-text-2" id="text-orgd6ccf04">
+<p>
+Print the first column (separated by <code>:</code>) from <code>/etc/passwd</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">awk -F: <span style="color: #b8bb26;">'{print $1}'</span> /etc/passwd
+</pre>
+</div>
+
+<p>
+Print the first column (separated by <code>:</code>) from <code>/etc/passwd</code> where the 3rd column is <code>1000</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">awk -F: <span style="color: #b8bb26;">'$3=="1000" {print $1}'</span> /etc/passwd
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Artem Smaznov</p>
-<p class="date">Created: 2021-10-10 Sun 13:36</p>
+<p class="date">Created: 2021-10-25 Mon 17:59</p>
 </div>
 </body>
 </html>
