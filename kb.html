@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-25 Mon 17:59 -->
+<!-- 2022-01-07 Fri 17:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ArtS - Knowledge Base</title>
@@ -210,17 +210,19 @@ header" />
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org94b0476">ssh</a>
+<li><a href="#orgd04cfae">ssh</a>
 <ul>
-<li><a href="#org0471bdd">Extending Screens</a></li>
+<li><a href="#org0ce4ce8">Extending Screens</a></li>
 </ul>
 </li>
-<li><a href="#orga4655df">git</a>
+<li><a href="#org786e69b">git</a>
 <ul>
-<li><a href="#org0d0ed8c">Bare Repositories</a></li>
+<li><a href="#org415a16a">Bare Repositories</a></li>
 </ul>
 </li>
-<li><a href="#orgd6ccf04">awk</a></li>
+<li><a href="#org0508a20">awk</a></li>
+<li><a href="#orgc7c2ed9">date</a></li>
+<li><a href="#org7ef5199">cmatrix</a></li>
 </ul>
 </div>
 </div>
@@ -243,13 +245,13 @@ header" />
 </tbody>
 </table>
 
-<div id="outline-container-org94b0476" class="outline-2">
-<h2 id="org94b0476">ssh</h2>
-<div class="outline-text-2" id="text-org94b0476">
+<div id="outline-container-orgd04cfae" class="outline-2">
+<h2 id="orgd04cfae">ssh</h2>
+<div class="outline-text-2" id="text-orgd04cfae">
 </div>
-<div id="outline-container-org0471bdd" class="outline-3">
-<h3 id="org0471bdd">Extending Screens</h3>
-<div class="outline-text-3" id="text-org0471bdd">
+<div id="outline-container-org0ce4ce8" class="outline-3">
+<h3 id="org0ce4ce8">Extending Screens</h3>
+<div class="outline-text-3" id="text-org0ce4ce8">
 <p>
 You can add another computer&rsquo;s monitor to your host&rsquo;s screen and control it using your keyboard and mouse as if it was an extra monitor. It can come in handy when working on 2 computers as you can control both with the same of keyboard and mouse.
 </p>
@@ -266,13 +268,13 @@ You can add another computer&rsquo;s monitor to your host&rsquo;s screen and con
 </div>
 </div>
 
-<div id="outline-container-orga4655df" class="outline-2">
-<h2 id="orga4655df">git</h2>
-<div class="outline-text-2" id="text-orga4655df">
+<div id="outline-container-org786e69b" class="outline-2">
+<h2 id="org786e69b">git</h2>
+<div class="outline-text-2" id="text-org786e69b">
 </div>
-<div id="outline-container-org0d0ed8c" class="outline-3">
-<h3 id="org0d0ed8c">Bare Repositories</h3>
-<div class="outline-text-3" id="text-org0d0ed8c">
+<div id="outline-container-org415a16a" class="outline-3">
+<h3 id="org415a16a">Bare Repositories</h3>
+<div class="outline-text-3" id="text-org415a16a">
 <p>
 Turning off untracked files for git status for bare repositories
 </p>
@@ -284,9 +286,9 @@ Turning off untracked files for git status for bare repositories
 </div>
 </div>
 
-<div id="outline-container-orgd6ccf04" class="outline-2">
-<h2 id="orgd6ccf04">awk</h2>
-<div class="outline-text-2" id="text-orgd6ccf04">
+<div id="outline-container-org0508a20" class="outline-2">
+<h2 id="org0508a20">awk</h2>
+<div class="outline-text-2" id="text-org0508a20">
 <p>
 Print the first column (separated by <code>:</code>) from <code>/etc/passwd</code>
 </p>
@@ -304,10 +306,39 @@ Print the first column (separated by <code>:</code>) from <code>/etc/passwd</cod
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgc7c2ed9" class="outline-2">
+<h2 id="orgc7c2ed9">date</h2>
+<div class="outline-text-2" id="text-orgc7c2ed9">
+<p>
+Convert dates between different formats.
+The example converts it to the Unix Epoch format that can be used to compare different dates
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #fabd2f;">date</span> --date=<span style="color: #b8bb26;">"12:30"</span> +%s
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7ef5199" class="outline-2">
+<h2 id="org7ef5199">cmatrix</h2>
+<div class="outline-text-2" id="text-org7ef5199">
+<p>
+Send any output (like cmatrix) to the TTY screen.
+User needs to be logged in on the TTY and not have a Graphical environment running. Best done over SSH on servers
+Might need <code>sudo</code> to be executed
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">cmatrix &gt; /dev/tty2
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Artem Smaznov</p>
-<p class="date">Created: 2021-10-25 Mon 17:59</p>
+<p class="date">Created: 2022-01-07 Fri 17:54</p>
 </div>
 </body>
 </html>

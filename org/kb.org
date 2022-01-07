@@ -34,3 +34,22 @@ Print the first column (separated by =:=) from =/etc/passwd= where the 3rd colum
 #+begin_src shell
 awk -F: '$3=="1000" {print $1}' /etc/passwd
 #+end_src
+
+* date
+Convert dates between different formats.
+The example converts it to the Unix Epoch format that can be used to compare different dates
+#+begin_src shell
+date --date="12:30" +%s
+#+end_src
+
+#+RESULTS:
+: 1641558600
+
+* cmatrix
+Send any output (like cmatrix) to the TTY screen.
+User needs to be logged in on the TTY and not have a Graphical environment running. Best done over SSH on servers
+Might need =sudo= to be executed
+#+begin_src shell
+cmatrix > /dev/tty2
+#+end_src
+
