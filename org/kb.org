@@ -19,27 +19,35 @@ ssh -YC user@host:port x2x -east -to :0.0
 
 * git
 ** Bare Repositories
-Turning off untracked files for git status for bare repositories
+Turning off untracked files for git status for bare repositories.
 #+begin_src shell
 git config status.showUntrackedFiles off
 #+end_src
 
+* sort
+Print out unique lines of the file in descending order.
+#+begin_src shell
+sort -u file
+#+end_src
+
 * awk
-Print the first column (separated by =:=) from =/etc/passwd=
+Print the first column (separated by =:=) from =/etc/passwd=.
 #+begin_src shell
 awk -F: '{print $1}' /etc/passwd
 #+end_src
 
-Print the first column (separated by =:=) from =/etc/passwd= where the 3rd column is =1000=
+Print the first column (separated by =:=) from =/etc/passwd= where the 3rd column is
+=1000=.
 #+begin_src shell
 awk -F: '$3=="1000" {print $1}' /etc/passwd
 #+end_src
 
 * date
 Convert dates between different formats.
-The example converts it to the Unix Epoch format that can be used to compare different dates
+The example converts it to the Unix Epoch format that can be used to compare
+different dates.
 #+begin_src shell
-date --date="12:30" +%s
+date -d "12:30" +%s
 #+end_src
 
 #+RESULTS:
@@ -47,8 +55,9 @@ date --date="12:30" +%s
 
 * cmatrix
 Send any output (like cmatrix) to the TTY screen.
-User needs to be logged in on the TTY and not have a Graphical environment running. Best done over SSH on servers
-Might need =sudo= to be executed
+User needs to be logged in on the TTY and not have a Graphical environment
+running. Best done over SSH on servers.
+Might need =sudo= to be executed.
 #+begin_src shell
 cmatrix > /dev/tty2
 #+end_src
